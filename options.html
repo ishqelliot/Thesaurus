@@ -1,0 +1,65 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Quick Thesaurus – Options</title>
+    <style>
+        body {
+            font: 14px -apple-system, system-ui, sans-serif;
+            margin: 20px;
+            max-width: 720px;
+        }
+
+        input[type="number"] {
+            width: 100px;
+        }
+
+        label {
+            display: block;
+            margin: 12px 0 6px;
+        }
+
+        .row {
+            display: flex;
+            gap: 8px;
+            align-items: center;
+        }
+
+        .muted {
+            opacity: .7;
+        }
+
+        button {
+            padding: 8px 12px;
+            border-radius: 8px;
+            border: 1px solid #ddd;
+            background: #f6f6f6;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Quick Thesaurus – Options</h1>
+    <p>Configure provider and defaults.</p>
+    <label>Provider</label>
+    <div class="row">
+        <label><input type="radio" name="provider" value="datamuse" checked>
+            Datamuse (free)</label>
+        <!-- Future providers can be added here -->
+    </div>
+    <label>Datamuse API URL</label>
+    <input id="datamuseUrl" type="text" style="width:100%" placeholder="https://
+api.datamuse.com/words" />
+    <label>Max results</label>
+    <input id="maxResults" type="number" min="1" max="50" />
+    <div style="margin-top:12px;" class="row">
+        <button id="save">Save</button>
+        <span id="status" class="muted"></span>
+    </div>
+    <script src="options.js"></script>
+</body>
+
+</html>

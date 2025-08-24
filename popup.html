@@ -1,0 +1,66 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Quick Thesaurus</title>
+    <style>
+        body {
+            font: 14px -apple-system, system-ui, sans-serif;
+            margin: 12px;
+            width: 280px;
+        }
+
+        .row {
+            display: flex;
+            gap: 8px;
+        }
+
+        input {
+            flex: 1;
+            padding: 8px;
+            border-radius: 8px;
+            border: 1px solid #ddd;
+        }
+
+        button {
+            padding: 8px 10px;
+            border-radius: 8px;
+            border: 1px solid #ddd;
+            background: #f6f6f6;
+            cursor: pointer;
+        }
+
+        .chips {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+            margin-top: 10px;
+        }
+
+        .chip {
+            padding: 4px 8px;
+            /* border: 1px solid #dddddd; */
+            /* border-radius: 9999px; */
+        }
+
+        .muted {
+            opacity: .7;
+            font-size: 12px;
+            margin-top: 8px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="row">
+        <input id="word" type="text" placeholder="Enter a word" autofocus />
+        <button id="go">Go</button>
+    </div>
+    <div id="results" class="chips"></div>
+    <div class="muted">Powered by Datamuse</div>
+    <script src="popup.js"></script>
+</body>
+
+</html>
